@@ -1,12 +1,11 @@
-export const addProducts = async ({title,descrpcion,price}) => {
-    const response = await fetch('https://fakestoreapi.com/products',{
-        method:"POST",
-        body:JSON.stringify(
+export const addProducts = async ({ title, description, price }) => {
+    const response = await fetch('https://fakestoreapi.com/products', {
+        method: "POST",
+        body: JSON.stringify(
             {
-                title ,
+                title,
                 description,
                 price
-               
             }
         )
     })

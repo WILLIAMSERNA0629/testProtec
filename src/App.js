@@ -8,16 +8,16 @@ import Form from './components/molecules/Form/Form'
 function App() {
   const [products, setProducts] = useState([])
 
-  const getProdutsRequest = async() => {
+  const getProdutsRequest = async () => {
     try {
       const data = await getProduct();
-      
+
       setProducts(data)
-    } catch{ console.log('error')}
+    } catch { console.log('error') }
   }
-  useEffect(()=>{
+  useEffect(() => {
     getProdutsRequest()
-  },[])
+  }, [])
 
 
   return (
@@ -26,10 +26,10 @@ function App() {
       <button type="button" class="btn btn-primary buttonAdd" data-toggle="modal" data-target="#staticBackdrop">
         Agregar Producto
       </button>
-      <Form/> 
+      <Form />
       <ProductsTable
         products={products}
-      />    
+      />
     </div>
   );
 }
